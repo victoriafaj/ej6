@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Manipulación DOM</title>
+</head>
+<body>
+    <div id="miDiv">
+        <p>Primer párrafo</p>
+        <p>Segundo párrafo</p>
+        <p>Tercer párrafo</p>
+    </div>
+
+    <script>
+        // Obtener la referencia al div
+        const div = document.getElementById('miDiv');
+
+        // Obtener el último hijo del div
+        const ultimoHijo = div.lastElementChild;
+
+        // Recorrer los elementos anteriores usando previousElementSibling
+        let elementoActual = ultimoHijo;
+        while (elementoActual) {
+            console.log(elementoActual.textContent);
+            elementoActual = elementoActual.previousElementSibling;
+        }
+    </script>
+</body>
+</html>
